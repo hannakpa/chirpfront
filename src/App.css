@@ -1,0 +1,7 @@
+html {
+  box-sizing: border-box
+}
+body, html {
+  height: 100vh;
+  margin: 5rem 5rem,
+}

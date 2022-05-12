@@ -1,0 +1,141 @@
+.barra {
+  height: 4em;
+  background-color: transparent !important;
+  top: 0; 
+}
+
+svg {
+  position:relative;
+  top:-1px;
+}
+
+.header {
+  background: url(/uploads/crab.gif) no-repeat center;
+  background-size: cover;
+  min-height: 70vh;
+  width: 100%;
+  padding: 0px !important;
+}
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 4s;
+}
+.animate__animated.animate__slideInDown{
+  --animate-duration: 3s;
+}
+
+.nav {
+  transition: all 0.1s linear;
+  height: 4rem;
+  position: fixed;
+  z-index: 2000;
+  top:0;
+  margin-left: -12px;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  
+}
+.scrollNav {
+  transition: all 0.5s ease-in;
+  z-index: 2000;
+  background: #ffffff;
+  background-size: cover;
+  width: 100%;
+  padding-left: 0px !important;
+  margin-left: -12px;
+}
+
+.logo{
+  padding-left: 50px;
+}
+
+.img-nav{
+  position: relative;
+  right: 20px;
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  margin: 0px;
+}
+
+.menushow{
+  position: absolute;
+}
+
+.ajustDrop{
+  position: relative;
+  left: -30px;
+}
+
+.link{
+  border-radius: 50% !important;
+}
+.link:active{
+  border-radius: 50% !important;
+}
+
+
+
+
+.navdrop:hover{ /*elementos dropdown*/
+  background-image: linear-gradient(to bottom right, #ffb347, #ffcc33);
+  border-radius: 5px;
+}
+
+.offcanvas.show {
+  transform: none;
+}
+.offcanvas-end {
+  top: 0;
+  right: 0;
+  width: 250px !important;
+  z-index: 3000 !important;
+  border-left: 1px solid rgba(0,0,0,.2);
+  transform: translateX(100%);
+  text-align: center;
+}
+
+a .dropdown-item:focus, .dropdown-item:hover {
+  color: none !important;
+  background-color: none !important;
+}
+
+.fotocanvas{
+  width:150px;
+  height:150px;
+  border-radius: 50%;
+  margin: 0px;
+}
+
+.mes{
+  margin: auto;
+  position: relative;
+  top: -16px;
+  right: 120px;
+  background-image: linear-gradient(to bottom right, #3abdd9,  #86e8f1);
+}
+
+/* icono */
+.ico{
+
+  position:relative;
+  top:-7px;
+}
+
+.saludo{
+  position: absolute;
+  top: 8px;
+  right:80px;
+  text-align: right;
+  padding-left: 15px;
+}
+
+@media only screen and (max-width: 576px) {
+  .header {
+    background: url(/uploads/crab.gif) no-repeat center;
+    background-size: cover;
+   height: 500px;
+    width: 100%;
+    padding: 0px !important;
+  }
+}

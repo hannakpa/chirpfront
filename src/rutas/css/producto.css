@@ -1,0 +1,122 @@
+.info-boxNeed {
+  text-align: left;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1), 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.imagenContacto {
+  padding-bottom: 10px;
+  display: flex;
+  text-align: right;
+  margin-left: 17%;
+  bottom: 0px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.alinear{
+  position: absolute;
+  bottom:-50px;
+}
+
+.principal{
+  padding: 5px;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 75px;
+  border-radius: 10px;
+  text-align: center;
+  background-image: linear-gradient(to bottom right, #3abdd9,  #86e8f1);
+  min-width: 800px;
+}
+
+.contenido{
+  margin-top: 15px;
+  background-image: none;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1), 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  
+}
+
+/* imagen de la persona */
+.contactoproducto{
+  position: absolute;
+  top: -15px;
+}
+
+
+.tituloProducto {
+  background-image: linear-gradient(to bottom right,  #ff6455, #ff9966);
+  padding: 3px;
+  padding-left: 3px;
+  border-radius: 10px;
+  width: 50% !important;
+  margin-left: -10px;
+  color: white;
+}
+
+.clasSearch{
+  position: absolute;
+  right: 325px;
+  width:50px !important;
+}
+.clasGift{
+  position: absolute;
+  right: 335px;
+  width:50px !important;
+}
+
+
+.rowlum{
+  padding-left: 10%;
+  padding-right: 10%;
+ }
+
+
+
+.p-5{
+  padding: 0rem !important;
+}
+
+
+.Image{border-radius: 10px;}
+
+.información{
+  padding: 30px;
+}
+
+.footer{
+ padding: 5px;
+  height: 30px !important;
+}
+
+.aside {
+  background-color: rgba(136, 0, 29, 0.075);
+  padding: 1rem;
+  margin: auto;
+  text-align: center;
+}
+
+.col-perfil {
+  margin: auto 1rem;
+}
+
+.col-contacto {
+  text-align: right;
+  align-items: center;
+}
+
+.titulo { 
+  text-align:center;
+  margin:2rem;
+}
+
+.fotocanv {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  margin: 0px;
+  cursor:pointer;
+}

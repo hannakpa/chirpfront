@@ -1,0 +1,68 @@
+div .modal-content {
+    margin-top: 75px;
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1), 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    /* align-items: center; */
+    background-image: linear-gradient(to top, #ffffff,  #86e8f1);
+}
+
+.cuerpomodal{
+   
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1), 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    
+   
+  
+    /* align-items: center; */
+}
+
+
+
+
+
+
+.login{
+    margin-top: 0px;
+    background-image: linear-gradient(to bottom right, #3abdd9,  #86e8f1);
+}
+
+.modal-header {
+    border-bottom: none !important;
+    width: 100%;
+}
+
+.titol {
+ font-family: 'Raleway', sans-serif;
+
+}
+
+.modal-body{
+    font-family: 'Roboto', sans-serif !important;
+    justify-content: center;
+    
+}
+
+.form-control{
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.btn{
+    background-image: linear-gradient(to bottom right, #3abdd9,  #86e8f1);
+    border: none !important;
+}
+
+.modal-footer{
+    border-top: none !important;
+}
+.btnResaltar{
+    background-image: linear-gradient(to bottom right, #ff6455,  #ff9966);
+}
+
+.btn:hover{
+    background-image: linear-gradient(to bottom right, #ffb347, #ffcc33);
+    transform: scale(1.1, 1.1);
+}
+/* FiNAL MODAL LOGIN  */
+
+/* MODAL CONTACTO*/
+

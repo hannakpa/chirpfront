@@ -1,0 +1,42 @@
+
+.col-perfil {
+  margin: auto 1rem;
+}
+
+.card {
+    text-align: center;
+    border: none;
+    font-size: 12px;
+    border-radius: 20px;
+   
+  }
+
+.imgcard {
+  border-radius: 10px;
+  width: 7rem !important;
+  margin-right: 20px;
+}
+
+i{
+  font-size: 1.5rem;
+}
+
+.derecha {
+  display: flex;
+  justify-content: right;
+}
+
+.contenedorCartas{
+  display:flex;
+  
+}
+
+.card-body{
+position:relative;
+}
+.esquina{
+  position:absolute;
+  right:0.3rem;
+  top:0.2rem;
+}
+

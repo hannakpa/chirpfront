@@ -1,0 +1,172 @@
+/* contenedor */
+.pt-3{ 
+  padding-left: 13%;
+  padding-right: 13%;
+  margin-top: 75px;
+}
+
+/* 1a Col - informacion perfil*/
+div.row .info-box{ 
+  padding: 40px;
+  border-radius: 10px;
+  margin: 10px; 
+  position: relative;
+}
+ 
+.noshadow{
+  box-shadow: none !important;
+}
+
+.fondoblanco{
+  background-color: white !important;
+}
+
+/* color detrás de la imagen del usuario */
+div.fondo{
+  background-image: linear-gradient(to bottom right, #3abdd9,  #86e8f1);
+  width: 100%;
+  height: 18%;
+  position: absolute;
+  top:0px;
+  right: 0px;
+  z-index: -1;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+      /* variación para fondo*/ 
+      .naranja { 
+        background-image: linear-gradient(to bottom right, #ff6455,  #ff9966) !important
+      }
+
+/* centrar texto/imagenes */
+.cntr{
+  text-align: center;
+}
+
+/* imagen perfil usuario */
+.imgperfil{
+  width: 30px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* 2a COL */
+
+/* estructura carta carrousel*/
+.cardRegala {
+    border-radius: 10px;
+    width: 8rem !important;
+    margin: 10px;
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1), 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+
+/* imagen del carrousel */
+.imgcartaCARR{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  margin-bottom: -0px;
+  width: 100% !important;
+  overflow:hidden;
+}
+
+/* body del carrousel (texto) */
+
+/*ancho del carrousel*/
+/* div.alice-carousel {
+  width:50%;
+} */
+
+.numero {
+  position: absolute;
+  left: -230px;
+  top: -35px;
+  padding: 10px 15px 0px 15px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+
+div.cardnec{
+  text-align: center;
+  border: none;
+  font-size: 12px;
+  border-radius: 5px;
+  /*  background-image: linear-gradient(to bottom right, #3ABDD9, #86E8F1);
+ background-image: linear-gradient(to bottom right, #86E8F1, #ffff36); */
+  cursor: pointer;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1), 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+div.cardn_perfil {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  border: none;
+  font-size: 12px;
+  border-radius: 10px;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1), 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  padding-bottom: 20px;
+  background-color: white;
+}
+
+i{
+  font-size: 1.5rem;
+}
+
+element.style {
+  width: 5rem !important;
+}
+
+.derecha {
+  position: absolute;
+  top: 15px;
+}
+
+.contenedorCartas{
+  display:flex;
+  flex-wrap: wrap;
+  
+}
+
+/* la papelera está donde toca en estoy buscando*/
+.card-body{
+position:relative;
+}
+
+.esquina{
+  position:absolute;
+  right:0.3rem;
+  top:0.2rem;
+}
+
+/* MEDIAQUERIES */
+
+@media only screen and (max-width: 992px) {
+
+.pt-3{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+} 
+
+@media only screen and (max-width: 576px) {
+
+.pt-3{
+ padding-left: 0%;
+ padding-right: 0%;
+}
+
+.rowcateg{
+  display: inline-block;
+  padding-left: 0%;
+  padding-right: 0%;
+  text-align: center;
+ }
+}
+
+
+.alice-carousel{
+  padding: 30px;
+  max-width: 300px;
+}

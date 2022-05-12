@@ -1,0 +1,243 @@
+/* COLORES
+
+azul claro  -  #86E8F1
+azul oscuro  -  #3ABDD9
+azul     background-image: linear-gradient(to bottom right, #3abdd9,  #86e8f1);
+
+amarillo  -  #ffcc33
+amarillo       background-image: linear-gradient(to bottom right, #ffb347, #ffcc33)
+
+coral  -  #FF6455
+coral      
+background-image: linear-gradient(to bottom right,  #ff6455, #ff9966);
+
+
+*/
+
+/* TIPOGRAFIAS */
+
+.titulos{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.textos {
+  font-family:'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.basepag{
+  padding: 0px !important;
+}
+
+/* CARROUSEL */
+/*
+.navfoto{
+margin-right: 10%;
+}
+.d-block {
+  width: 100%;
+  position: absolute;
+  top: -350px
+}
+.caixa{
+  display: flex;
+}*/
+
+.text{
+  animation: bounceIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 4s; /* don't forget to set a duration! */
+  text-align: left;
+  font-size: 65px;
+ margin-top: 5%;
+ margin-left: 17%;
+ z-index: 1500;
+ color: white;
+
+}
+
+.head{
+  width: 70%;
+  text-align: right;
+  height: 520px;
+
+  animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 3s; /* don't forget to set a duration! */
+}
+
+/* CATEGORIES.JSX */
+
+.rowcateg{
+  display: inline-block; 
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+ }
+
+ .clascateg{
+   padding-top: 4%;
+ }
+
+.cat {
+  align-items: center;  
+  text-align: center;
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+
+.catbut{
+  background-color: whitesmoke !important;
+  padding: 1rem;
+  width: auto;
+  margin: 0.7rem 0.5rem 0rem 0.5rem;
+  border-radius: 5px;
+  height: 1.5rem;
+  line-height:5%;
+  cursor: pointer;
+}
+
+.catbut:hover {
+  transform: scale(1.1, 1.1);
+  color: white;
+  /* background-color: #FF6455; */
+  /* background-image: linear-gradient(to bottom right, #86E8F1, #ffff36); */
+  background-image: linear-gradient(to bottom right, #ffb347, #ffcc33)
+  /* background-color: #F0B705; */
+} 
+
+.catbut:target{
+  background-image: linear-gradient(to bottom right, #3abdd9,  #86e8f1);
+
+}
+
+.todas{
+  width: 400px;
+  background-color: #ff5e62;
+  background-image: linear-gradient(to bottom right,  #ff6455, #ff9966);
+  color: white;
+}
+
+/* GRID.JSX */
+
+.imgcarta{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: relative;
+  margin-bottom: -0px;
+}
+
+.card-body{
+height: 80px;
+background-color: white;
+border-radius: 10px;
+}
+
+div.card{
+  text-align: center;
+  border: none 0px !important;
+  font-size: 12px;
+  border-radius: 5px !important;
+  cursor: pointer;
+  width: 100% !important;
+
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1), 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+div.cardnec{
+  background-color: white;
+  text-align: right;
+  position: relative;
+  border: none;
+  font-size: 12px;
+  border-radius: 5px;
+  /*  background-image: linear-gradient(to bottom right, #3ABDD9, #86E8F1);
+ background-image: linear-gradient(to bottom right, #86E8F1, #ffff36); */
+  cursor: pointer;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1), 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+.classif{
+  background-image: linear-gradient(to bottom right, #3abdd9,  #86e8f1);
+  color: white;
+  width: 40px !important;
+  height: 40px !important;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.busco{ 
+  width: auto;
+  background-image: linear-gradient(to bottom right, #ff6455,  #ff9966);
+}
+
+          /* MASONRY */
+
+          .my-masonry-grid {
+            display: flex;
+            justify-content: center;
+            /* gutter size offset */
+            
+          }
+          .my-masonry-grid_columna {
+            margin: 10px;
+            width: 220px !important;
+          }
+          
+          /* Style your items */
+          .my-masonry-grid_columna > div { /* cambia las tarjetas */
+            margin-bottom: 20px;
+            width: 100%;
+          }
+
+          .rowlum{
+           padding-left: 10%;
+           padding-right: 10%;
+          }
+
+          div.Row{
+            text-align: center;
+          }
+
+/* FOOTER */
+
+.foot{
+  width: 100%;
+  height: 275px;
+  background-image: linear-gradient(to bottom right, #3abdd9,  #86e8f1);
+  text-align: center;
+  padding: 30px;
+  bottom: 0;
+}
+
+
+
+/*   MEDIAQUERIES   */
+@media only screen and (max-width: 992px) {
+
+  .rowlum{
+ padding-left: 5%;
+ padding-right: 5%;
+}
+} 
+
+
+@media only screen and (max-width: 576px) {
+
+  .rowlum{
+ padding-left: 0%;
+ padding-right: 0%;
+}
+.rowcateg{
+  display: inline-block;
+  padding-left: 0%;
+  padding-right: 0%;
+  text-align: center;
+ }
+}
