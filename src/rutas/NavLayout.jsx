@@ -1,17 +1,5 @@
 //import { useState, useEffect } from "react";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Container,
-  Col,
-  Row,
-  Button,
-  NavbarBrand,
-  NavLink,
-  Image,
-  Offcanvas,
-} from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Container, Col, Row, Button, NavbarBrand, NavLink, Image, Offcanvas, ButtonGroup } from "react-bootstrap";
 import { StickyNav } from "react-js-stickynav";
 
 import { useNavigate } from "react-router-dom";
@@ -20,25 +8,22 @@ import "./css/navLayout.css";
 import { Link, Outlet } from "react-router-dom";
 import AutenticacionContext from "../../context/autenticarContext";
 import ModalLogin from "./ModalLogin.jsx";
-import {
-  HiOutlineCog,
-  HiPlus,
-  HiChat,
-  HiOutlineUser,
-  HiOutlineUsers,
-  HiArrowNarrowLeft,
-  HiArrowNarrowRight,
-} from "react-icons/hi";
+import { HiOutlineCog, HiPlus, HiChat, HiOutlineUser, HiOutlineUsers, HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";
 import { IMG_PER_URL } from "../tools/config.js";
 import Logo from "/../uploads/logo2.png";
+
+import TranslateContext from "../../context/TranslateContext";
 
 function NavLayout({ name, ...props }) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const { saveToken, logout, datosAutenticado } =
-    useContext(AutenticacionContext);
+  ////traduccion
+  const { traduce, idioma, setIdioma } = useContext(TranslateContext);
+
+  const { saveToken, logout, datosAutenticado } = useContext(AutenticacionContext);
+
   const navigateTo = useNavigate();
 
   const goHome = () => {
@@ -70,6 +55,7 @@ function NavLayout({ name, ...props }) {
     goHome();
   }
 
+  console.log(idioma);
   return (
     <div>
       <Container fluid>
@@ -81,17 +67,20 @@ function NavLayout({ name, ...props }) {
                   <img src={Logo} style={{ height: "60px" }} />
                 </Link>
               </NavbarBrand>
+              <Nav>
+                <ButtonGroup>
+                  <Button onClick={() => setIdioma(0)}>Español</Button>
+                  <Button onClick={() => setIdioma(1)}>English</Button>
+                  <Button onClick={() => setIdioma(2)}>Русский</Button>
+                </ButtonGroup>
+              </Nav>
 
               {!saveToken ? (
                 <Nav className=" ms-auto"></Nav>
               ) : (
                 <div className=" ms-auto ">
                   &nbsp;
-                  <div
-                    className="catbut mes"
-                    onClick={goNuevo}
-                    style={{ fontSize: "1rem", cursor: "pointer" }}
-                  >
+                  <div className="catbut mes" onClick={goNuevo} style={{ fontSize: "1rem", cursor: "pointer" }}>
                     <HiPlus className="ico" />
                   </div>
                   <div className=" saludo ">
@@ -106,40 +95,19 @@ function NavLayout({ name, ...props }) {
                 ) : (
                   <>
                     <Nav>
-                      <img
-                        style={{ cursor: "pointer" }}
-                        onClick={handleShow}
-                        className="img-nav"
-                        src={IMG_PER_URL + datosAutenticado.foto}
-                      ></img>
+                      <img style={{ cursor: "pointer" }} onClick={handleShow} className="img-nav" src={IMG_PER_URL + datosAutenticado.foto}></img>
 
-                      <Offcanvas
-                        show={show}
-                        placement={"end"}
-                        onHide={handleClose}
-                        {...props}
-                      >
+                      <Offcanvas show={show} placement={"end"} onHide={handleClose} {...props}>
                         <Offcanvas.Header closeButton></Offcanvas.Header>
                         <Offcanvas.Title>
-                          <Image
-                            className="fotocanvas"
-                            src={IMG_PER_URL + datosAutenticado.foto}
-                          />
+                          <Image className="fotocanvas" src={IMG_PER_URL + datosAutenticado.foto} />
                         </Offcanvas.Title>
                         <Offcanvas.Body>
-                          <NavDropdown.Item
-                            className="navdrop"
-                            onClick={goPerfil}
-                          >
-                            <HiOutlineUser style={{ stroke: "#FF6455" }} /> Mi
-                            perfil
+                          <NavDropdown.Item className="navdrop" onClick={goPerfil}>
+                            <HiOutlineUser style={{ stroke: "#FF6455" }} /> {traduce("my_profile")}
                           </NavDropdown.Item>
-                          <NavDropdown.Item
-                            className="navdrop"
-                            onClick={goEditarPerfil}
-                          >
-                            <HiOutlineCog style={{ stroke: "#FF6455" }} />{" "}
-                            Editar Perfil
+                          <NavDropdown.Item className="navdrop" onClick={goEditarPerfil}>
+                            <HiOutlineCog style={{ stroke: "#FF6455" }} /> {traduce("settings")}
                           </NavDropdown.Item>
                           <br />
                           <div
@@ -149,28 +117,18 @@ function NavLayout({ name, ...props }) {
                               borderBottom: "1px solid grey",
                             }}
                           >
-                            <HiChat style={{ color: "#FF6455" }} /> Mensajes
+                            <HiChat style={{ color: "#FF6455" }} /> {traduce("messages")}
                           </div>
-                          <NavDropdown.Item
-                            className="navdrop"
-                            onClick={goMisIntereses}
-                          >
-                            <HiArrowNarrowLeft style={{ color: "#FF6455" }} />{" "}
-                            Enviados
+                          <NavDropdown.Item className="navdrop" onClick={goMisIntereses}>
+                            <HiArrowNarrowLeft style={{ color: "#FF6455" }} /> {traduce("sent")}
                           </NavDropdown.Item>
-                          <NavDropdown.Item
-                            className="navdrop"
-                            onClick={goContactos}
-                          >
-                            <HiArrowNarrowRight
-                              style={{ color: "#FF6455" }}
-                            />{" "}
-                            Recibidos
+                          <NavDropdown.Item className="navdrop" onClick={goContactos}>
+                            <HiArrowNarrowRight style={{ color: "#FF6455" }} /> {traduce("received")}
                           </NavDropdown.Item>
 
                           <br />
                           <NavDropdown.Item onClick={salir}>
-                            <div className="catbut">Cerrar sesión</div>
+                            <div className="catbut">{traduce("log_out")}</div>
                           </NavDropdown.Item>
                         </Offcanvas.Body>
                       </Offcanvas>

@@ -21,6 +21,10 @@ import Contactos from "./rutas/private/Contactos";
 import EditarPerfil from "./rutas/private/EditarPerfil";
 import MisIntereses from "./rutas/private/MisIntereses";
 
+///context translate
+import TranslateContext from "../context/TranslateContext";
+import vocabulario from "../context/vocabulario";
+
 function App() {
   const [datosAutenticado, setDatosAutenticado] = useState(null);
   const [saveToken, setSaveToken] = useState("");
@@ -36,6 +40,13 @@ function App() {
   const [artDisponibles, setArtDisponibles] = useState([]);
   const [distritos, setDistritos] = useState([]);
   const [msnEnviados, setMsnEnviados] = useState([]);
+
+  ///traducción
+  const [idioma, setIdioma] = useState(0);
+
+  //funcion que traduce
+
+  const traduce = (etiqueta) => vocabulario[etiqueta][idioma];
 
   const cargaArticulos = () => {
     fetch(API_URL + "articulos")
@@ -131,26 +142,29 @@ function App() {
   //console.log(msnEnviados);
   return (
     <div>
-      <AutenticacionContext.Provider value={{ logout, datosAutenticado, setDatosAutenticado, saveToken, setSaveToken, articulos, categorias, necesidades, cargaArticulos, cargaNecesidades, artDisponibles, misArtActivos, setMisArtActivos, msnRecibidos, getMensajes, handleShowLogin, handleCloseLogin, showLogin, distritos, cargarDatosAutenticado, msnEnviados, getMsnEnviados }}>
-        <BrowserRouter>
-          <Routes>
-            {/* ruta general. el index es lo que se vera por defecto. los path son los que cambiarán */}
-            <Route path="/" element={<NavLayout />}>
-              <Route index element={<Welcome />} />
-              <Route path="producto/:id" element={<Producto />} />
-              <Route path="necesidad/:id" element={<Necesidad />} />
-              <Route path="usuario/:id" element={<OtroPerfil />} />
-              <Route path="perfil" element={<Perfil />} />
-              <Route path="nuevo" element={<Nuevo />} />
-              <Route path="contactos" element={<Contactos />} />
-              <Route path="perfil/edit" element={<EditarPerfil />} />
-              <Route path="intereses" element={<MisIntereses />} />
-            </Route>
-            {/* ruta para usuario. aqu'i en el appu modificar'en su parte fija tambien */}
-          </Routes>
-        </BrowserRouter>
-        {/* <Footer /> */}
-      </AutenticacionContext.Provider>
+      <BrowserRouter>
+        <TranslateContext.Provider value={{ traduce, idioma, setIdioma }}>
+          <AutenticacionContext.Provider value={{ logout, datosAutenticado, setDatosAutenticado, saveToken, setSaveToken, articulos, categorias, necesidades, cargaArticulos, cargaNecesidades, artDisponibles, misArtActivos, setMisArtActivos, msnRecibidos, getMensajes, handleShowLogin, handleCloseLogin, showLogin, distritos, cargarDatosAutenticado, msnEnviados, getMsnEnviados }}>
+            <Routes>
+              {/* ruta general. el index es lo que se vera por defecto. los path son los que cambiarán */}
+              <Route path="/" element={<NavLayout />}>
+                <Route index element={<Welcome />} />
+                <Route path="producto/:id" element={<Producto />} />
+                <Route path="necesidad/:id" element={<Necesidad />} />
+                <Route path="usuario/:id" element={<OtroPerfil />} />
+                <Route path="perfil" element={<Perfil />} />
+                <Route path="nuevo" element={<Nuevo />} />
+                <Route path="contactos" element={<Contactos />} />
+                <Route path="perfil/edit" element={<EditarPerfil />} />
+                <Route path="intereses" element={<MisIntereses />} />
+              </Route>
+              {/* ruta para usuario. aqu'i en el appu modificar'en su parte fija tambien */}
+            </Routes>
+
+            {/* <Footer /> */}
+          </AutenticacionContext.Provider>
+        </TranslateContext.Provider>
+      </BrowserRouter>
     </div>
   );
 }
