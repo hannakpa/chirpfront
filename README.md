@@ -7,20 +7,22 @@ Chirp is a platform for those digital nomads that come to Barcelona. In this pla
 
 ## Clone the front repository
 Insert the following commands:
-
+```
 git clone https://github.com/hannakpa/chirpfront.git
 npm i
 npm run dev
+```
 
 ## Clone the back repository
 Insert the following commands:
-
+```
 git clone https://github.com/hannakpa/chirpback.git
 npm i
 npm start
-
+```
 ## Database 
-MySQL database: https://we.tl/t-XtiB7XCDQW
+You can find the DataBase in the **chirpback repository** by the name of **db**
+https://github.com/hannakpa/chirpback 
 
 ## Login
 In order to test out all the functionalities, try logging in with the username petrakovahanna@gmail.com and the password 1234.
